@@ -16,3 +16,19 @@ A RAG-based AI assistant that answers questions about RBI Master Circulars. Buil
 ## Version History
 - V1 — Colab based RAG pipeline
 - V2 — Deployed as Streamlit web app
+
+#Project Structure
+
+rbi-gpt/
+
+├── app.py              ← Streamlit UI
+
+├── rag.py              ← RAG pipeline (search + answer)
+
+├── rbi_db/             ← ChromaDB vector store
+
+├── requirements.txt    ← Dependencies
+
+└── .streamlit/
+
+└── secrets.toml    ← API keys (not in GitHub)
