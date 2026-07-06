@@ -53,8 +53,20 @@ if prompt := st.chat_input("Ask an RBI question..."):
     with st.chat_message("assistant"):
         with st.spinner("Searching RBI circulars..."):
             try:
-                answer = ask_rbi(collection, gemini_client, prompt, simple=simple_mode)
+                answer = ask_rbi(
+                    collection,
+                    gemini_client,
+                    prompt,
+                    simple=simple_mode,
+                    chat_history=st.session_state.messages[:-1]
+                )
                 st.markdown(answer)
                 st.session_state.messages.append({"role": "assistant", "content": answer})
             except Exception as e:
                 st.error(f"Error: {str(e)}")
+
+# Clear chat button
+if st.session_state.messages:
+    if st.button("Clear chat"):
+        st.session_state.messages = []
+        st.rerun()
