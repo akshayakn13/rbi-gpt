@@ -13,6 +13,9 @@ A RAG-based AI assistant that answers questions about RBI Master Circulars. Buil
 ## Live Demo
 [Click here to try RBI GPT](https://rbi-gpt-1395.streamlit.app/)
 
+## 🎥 Demo Video
+[Watch the demo on LinkedIn](https://www.linkedin.com/feed/update/urn:li:ugcPost:7480819006312988672/)
+
 ## Version History
 - V1 — Colab based RAG pipeline
 - V2 — Deployed as Streamlit web app
